@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+var a=new Array(5);
+var b=new Array(5);
+var c=new Array(5);
+for(i=0;i<5;i++)
+{
+a[i]=parseInt(prompt("Enter any no. for a"));
+}
+for(i=0;i<5;i++)
+{
+b[i]=parseInt(prompt("Enter any no. for b"));
+}
+for(i=0,j=4;i<5;i++,j--)
+{
+c[i]=a[i]+b[i];
+}
+for(i=0;i<5;i++)
+{
+document.write(c[i]+"="+a[i]+"+"+b[i]+"<br>");
+}
+</script>
+</head>
+</html>

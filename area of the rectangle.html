@@ -1,0 +1,18 @@
+<html>
+<head>
+<script>
+function area()
+{
+var b=parseInt(document.getElementById("s1").value);
+var l=parseInt(document.getElementById("s2").value);
+var area=l*b;
+document.write("area of the rectangle is "+area);
+}
+</script>
+</head>
+<body>
+base<input type="text" id="s1">
+lenght<input type="text" id="s2">
+<input type="button" value="area" onclick=area()>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+table td{height:25px;width:40px}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td bgcolor="red"></td><td bgcolor="pink"></td><td bgcolor="green"></td>
+</tr>
+<tr>
+<td bgcolor="orange"></td><td bgcolor="blue"></td><td bgcolor="black"></td>
+</tr>
+<tr>
+<td bgcolor="brown"></td><td bgcolor="grey"></td><td bgcolor="yellow"></td>
+</tr>
+</table>
+Enter your choice between 1to 9
+<input type="text" id="t1"placeholder="please enter a number">
+<input type ="button" value="fill color" onclick="fill_color()">
+<input type="text" id="t2">
+</body>
+<script>
+function fill_color()
+{
+var ch=parseInt(document.getElementById('t1').value);
+switch (ch)
+{
+case 1:document.getElementById('t2').style.background="red";
+break;
+case 2:document.getElementById('t2').style.background="pink";
+break;
+ case 3:document.getElementById('t2').style.background="green";
+break;
+case 4:document.getElementById('t2').style.background="orange";
+break;
+case 5:document.getElementById('t2').style.background="blue";
+break;
+case 6:document.getElementById('t2').style.background="black";
+break;
+case 7:document.getElementById('t2').style.background="brown";
+break;
+case 8:document.getElementById('t2').style.background="grey";
+break;
+case 9:document.getElementById('t2').style.background="yellow";
+break;
+default:alert("default choice");
+}
+}
+</script>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+<h1><center><fieldset><font color=blue><b>XYZ HARDWARE SHOP</b></font>
+</head>
+<body bgcolor=gray>
+<form>
+<caption>Please select an Item</caption>
+<select id="p1" onchange="show_price()">
+<option value="TV"> TV </option>
+<option value="AC"> AC </option>
+<option value="COOLER"> COOLER  </option>
+<option value="REFRIZRATOR"> REFRIZRATOR </option>
+</select>
+<br>
+Price
+<input type="text" Id="t1">
+<br>
+Select payment Mode
+<input type="radio" Name=R1 value=Cash id="n1"> Cash
+<input type="radio" Name=R1 value=Installment id="n2"> Installment
+<br>
+Select Installment Mode
+<select id="time">
+<option value="1"> 1st year </option>
+<option value="2"> 2nd year </option>
+<option value="3"> 3rd year </option>
+</select>
+<br>
+<input type="button" value="Get Bill" onclick="getbill()">
+<br>
+Total amount to be paid
+<input type="text" id="a1">
+<br>
+Monthly Installment
+<input type="text" id="m1">
+</form>
+<script>
+var price;
+function show_price()
+{
+ch=document.getElementById("p1").value;
+switch(ch)
+{
+case "TV":price="95000";
+break;
+case "AC":price="20000";
+break;
+case "COOLER":price="40000";
+break;
+case "REFRIZRATOR":price="60000";
+break;
+}
+document.getElementById("t1").value=price;
+}
+
+function getbill()
+{
+if(document.getElementById("n1").checked==true)
+{
+var amount=price-(price*20)/100;
+document.getElementById("a1").value=amount;
+}
+
+var monthlyinst=0;
+if(document.getElementById("n2").checked==true)
+{
+var year=document.getElementById("time").value;
+if(year==1)
+{
+inst=(price*year*2)/100;
+totalinst=(parseInt(price)+parseInt(inst));
+monthlyinst=totalinst/12;
+}
+
+if(year==2)
+{
+inst=(price*year*5)/100;
+totalinst=(parseInt(price)+parseInt(inst));
+monthlyinst=totalinst/24;
+}
+
+if(year==3)
+{
+inst=(price*year*7)/100;
+monthly=(parseInt(price)+parseInt(inst));
+monthlyinst=totalinst/36;
+}
+document.getElementById("a1").value=totalinst;
+document.getElementById("m1").value=Math.round(monthlyinst);
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+for(j=1;j<=1000;j++)
+{
+n=j;
+sum=0;
+while(n>0)
+{
+rem=n%10;
+sum=sum+(rem*rem*rem);
+n=Math.floor(n/10);
+}
+if(sum==j)
+{
+document.write(j+" ");
+}
+}
+</script>
+</head>
+</html>

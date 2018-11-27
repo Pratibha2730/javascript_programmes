@@ -1,0 +1,30 @@
+<html>
+<body>
+<form  name="a">
+Enter 1st no.
+<input type="text" Id="N1">
+<br>
+Enter 2nd no.
+<input type="text" Id="N2">
+<br>
+Total is:
+<input type="text"Id="N3">
+<br>
+<input type="button" value="submit" onclick="sum()">
+<input type="reset" value="clear">
+</form>
+</body>
+<head>
+<script>
+function sum()
+{
+var a,b,c=0;
+a=parseInt(document.getElementById('N1').value);
+b=parseInt(document.getElementById('N2').value);
+c=a+b;
+alert("hello a="+a+" and B="+b);
+document.a.N3.value=c.toString ();
+}
+</script>
+</head>
+</html>
